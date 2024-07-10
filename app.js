@@ -243,9 +243,9 @@ document.getElementById("right").addEventListener("click",()=>{
 document.getElementById("left").addEventListener("click",()=>{
     left()
 })
-document.getElementById("up").addEventListener("click",()=>{
-    up()
-})
-document.getElementById("bottom").addEventListener("click",()=>{
-    bottom()
-})
+// document.getElementById("up").addEventListener("click",()=>{
+//     up()
+// })
+// document.getElementById("bottom").addEventListener("click",()=>{
+//     bottom()
+// })
