@@ -163,7 +163,13 @@ ul{
 }
 @media (max-width:992px) {
     .arrow{
+        width: 80%;
+        /* border: 2px solid; */
+        margin: 35px 0px;
         display: flex !important;
+    }
+    .car{
+        bottom: 140px;
     }
 }
 .arrow>div>i{
