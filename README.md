@@ -14,7 +14,7 @@ This Traffic Race Game is a browser-based game created using HTML, CSS, and Java
 - **Responsive Design:** Works seamlessly on both large screens and mobile devices. On mobile screens, arrow buttons are displayed for easy control.
 
 ## Demo
-You can play the game live [here](https://fasih-nasirjsproject26.netlify.app/).
+You can play the game live [here](https://fasih-nasircargame.netlify.app/).
 
 ## Technologies Used
 - HTML
