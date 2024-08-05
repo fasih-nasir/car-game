@@ -54,6 +54,17 @@ On mobile screens, arrow buttons will be displayed for easy control. Players can
 
 ![image](https://github.com/fasih-nasir/jsproject26/assets/154458171/410fa407-6b56-46c1-a243-68e6def1950c)
 
+
+# Fasih-Nasir's Project Showcase 🎇📌
+
+
+
+### Home Page
+
+The home page showcases my top-rated projects. Users can navigate through different categories of projects using a dropdown menu and search bar. Each project is displayed with an image, title, and a link to view the live demo.
+
+![image](https://github.com/user-attachments/assets/59ff1785-18a4-4f93-b23a-f111a944f97a) 
+- 👨‍💻 All of my projects are available at [https://fasih-nasirall.netlify.app/]
 ## Screenshots 📸
 
 - 👨‍💻 All of my projects are available at [https://fasih-nasirall.netlify.app/]
