@@ -1,11 +1,18 @@
+document.getElementById("mut").addEventListener("click",()=>{
+    const audios = document.querySelectorAll("audio");
+    
+    for (let i = 0; i < audios.length; i++) {
+        audios[i].muted = true;
+    }
+})
 var sco=document.getElementById("score1")
-var co=document.getElementById("coins");
+
 var aud=document.getElementById("aui")
 var lineInterval ;  
 var moveInterval;
 var set1;
 var set;
-
+var resco;
 var myWindow;
 var coi
 function openWin() {
@@ -18,48 +25,71 @@ function closeWin() {
   myWindow.pause();
 }
 
-console.log(myWindow);
-document.getElementById("start1").addEventListener("click",()=>{
-    closeWin()
- 
-    lineInterval = setInterval(createLine, 1000);
-     moveInterval = setInterval(moveLines, 100);
-     set1=setInterval(create1,800)
-set=setInterval(move,50)
- document.getElementById("ins").classList.add("dno")
- 
- aud.play()
-   document.getElementById("dnone").style.display="block";
-   var num1=0
+// console.log(myWindow);
+document.getElementById("start1").addEventListener("click", () => {
+    // Get the speed and car color values
+    var carcol = document.getElementById("carcol");
+    var speedInput = document.getElementById("speed");
+    var speed = parseInt(speedInput.value, 10); // Convert speed to an integer
 
+    // Check if both speed and car color are valid
+    if (speed && carcol.value) {
+        closeWin();
 
-   function fnscre(){
- sco.innerHTML=num1
-num1++
-if(num1 >100){
-   co.innerHTML=1 
-}
-else if(num1 >200){
-   co.innerHTML=2  
-}
+        var imgcrt = document.getElementById("imgcrt");
+        imgcrt.src = carcol.value;
+        // console.log("Selected color URL:", carcol.value);
+        // console.log("Speed:", speed);
 
-else if(num1 >300){
-    co.innerHTML=3  
-}
+        // Start the game intervals
+        lineInterval = setInterval(createLine, speed - 200);
+        moveInterval = setInterval(moveLines, speed);
+        set1 = setInterval(create1, speed);
+        set = setInterval(move, 50);
+        document.getElementById("ins").classList.add("dno");
 
-else if(num1 >400){
-    co.innerHTML=4  
-}
+        // Play the audio and show the game screen
+        aud.play();
+        document.getElementById("dnone").style.display = "block";
 
-else if(num1 >500){
-    c.innerHTML=5  
-}
-}
-coi=setInterval(fnscre,200)
-})
+        // Initialize score
+        var num1 = 0;
+        var co;
+        // Function to update score and levels
+        function fnscre() {
+          co=document.getElementById("coins");
+            sco.innerHTML = num1;
+            num1++;
+            if (num1 > 100) {
+                co.innerHTML = 1;
+                resco=co.innerHTML;
+            } if (num1 > 200) {
+                co.innerHTML = 2;
+                resco=co.innerHTML;
+            } if (num1 > 300) {
+                co.innerHTML = 3;
+                resco=co.innerHTML;
+            } if (num1 > 400) {
+                co.innerHTML = 4;
+                resco=co.innerHTML;
+            } if (num1 > 500) {
+                co.innerHTML = 5;
+                resco=co.innerHTML;
+            }
+        }
+
+        // Start score updating
+        coi = setInterval(fnscre, 200);
+    } else {
+        // Show an error or alert if inputs are not valid
+        alert("Please select both a car color and speed.");
+    }
+});
 var createarr = [];
 var linearr = [];
 var num=1
+
+
 function create1() {
 
     //  intro.pause()
@@ -67,10 +97,12 @@ function create1() {
     var road = document.getElementById("road");
     var creat = document.createElement("div");
     var line=document.createElement("div")
+    
     line.className="line";
     creat.className = "oppo"; 
     creat.style.left = Math.floor(Math.random() * (road.offsetWidth - 55)) + "px";
     creat.style.top = "0px";
+    // creat.style.backgroundImage=`${carcol}`;
     creat.style.backgroundImage=`url(assets/car${num}.png)`;
     num++
     if(num>3){
@@ -215,12 +247,14 @@ function endgame(){
     // div.id="re"
     div.classList.add("re")
     // div.style.backgroundColor="#ffa04de5"
+    // console.log(resco);
+    
     div.innerHTML=`
-        //  <div id="re" class=" col-10 col-lg-5 d-flex justify-content-center align-items-center flex-column">
+
           <h3>Your Score Is :${sco.innerHTML}</h3>
-          <h3>Your Coin Is :${co.innerHTML}</h3>
+
           <button onclick="resetyy()">Play Again</button>
-        //   </div>
+     
           `
     // road.appendChild(div)
     clearInterval(lineInterval)
