@@ -27,8 +27,8 @@ You can play the game live [here](https://fasih-nasircargame.netlify.app/).
 
 To start the game, simply click the "Start" button. Upon clicking, the game will begin, and an audio effect simulating the sound of a car starting will play. This provides an engaging and immersive experience right from the beginning.
 
+![image](https://github.com/user-attachments/assets/8b6523b2-bfaa-458d-b063-804cf1c48e50)
 
-![image](https://github.com/fasih-nasir/jsproject26/assets/154458171/d75a5e59-1ccd-45cc-9d86-7fc2e57de2a2)
 
 
 ## Accessing with Keyboard Arrow Keys
