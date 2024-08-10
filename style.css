@@ -32,7 +32,7 @@ body{
     position: absolute;
     background-image: url(assets/car1.png);
     background-size: 100% 100%;
-    height: 60px;
+    height: 76px;
     width: 40px;
     z-index: 1;
 }
@@ -44,7 +44,7 @@ body{
     position: absolute;
     bottom: 50px ;
     /* border: 2px solid ; */
-
+transform: rotate(180deg);
    
 }
 .line {
@@ -76,7 +76,9 @@ body{
 #ins{
     background-position:center;
     width: 100%;
-background-image: url(assets/86248617660.png);
+    top: 0px;
+    position: relative;
+/* background-image: url(assets/86248617660.png); */
 height: 100vh;
 object-fit: cover;
 background-size: cover;
@@ -88,7 +90,7 @@ background-position: center;
     flex-direction: column; */
     /* position: fixed; */
 
-    background-color: #EC782F;
+    /* background-color: #EC782F; */
   
     color: #d4eff7;
     /* overflow: hidden; */
@@ -101,6 +103,31 @@ background-position: center;
  
     /* font-family: "Play", sans-serif; */
     /* padding: 20px */
+}
+select{
+    cursor: grab;
+    outline: none;
+    /* border: none; */
+    color:white;
+    background-color: #003e4b;
+    border-radius: 5px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+video{
+    height: 100vh !important;
+    /* width: 100% !important; */
+    position: relative;
+}
+@media (max-width:992px) {
+    video{
+        top: 0px !important;
+        /* height: 200vh !important; */
+    }
+}
+#starcol{
+    position: absolute;
+    /* top: 0px; */
 }
 #ins>h2{
     color: white;
@@ -169,7 +196,7 @@ ul{
         display: flex !important;
     }
     .car{
-        bottom: 200px;
+        bottom: 140px;
     }
 }
 .arrow>div>i{
