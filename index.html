@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <!-- FONT AWEOMSE -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
@@ -28,24 +29,46 @@
 <audio  id="aui" loop >
   <source src="assets/traffic.mp3" type="audio/mpeg" >
       </audio>
-  <div class="container-fluid d-flex justify-content-center align-items-center" id="ins">
-    <div class="col-lg-5 col-md-10 col-11 justify-content-center align-items-center text-center d-flex flex-column" id="starcol" >
+
+      <div class="container-fluid d-flex justify-content-center align-items-center" id="ins">
+    <video  autoplay loop muted class="col-12">
+      <source src="assets/video.mp4" class="col-12" type="video/mp4">
+    </video>
+    <div class="col-lg-5 col-8 justify-content-center align-items-center text-center d-flex flex-column" id="starcol" >
       
-      
-        <h3>Click the Start Game button below to begin!</h3>
-        <button class="str" id="start1">Start Game</button>
+      <h3>Click the Start Game button below to begin!</h3>
+      <select name="" id="speed" class="col-8">
+        <option value="Game Spedd" disabled selected readonly>Game Speed</option>
+        <option value="1500" >Easy</option>
+        <option value="1000">Normal</option>
+        <option value="500">Hard</option>
+      </select>
+
+      <select name="" id="carcol" class="col-8">
+        <option value=""disabled selected readonly>Car Color</option>
+        <option value="assets/Car.png" >Red Color</option>
+        <option value="assets/car1.png" >Orange Color</option>
+        <option value="assets/car2.png" >Green Color</option>
+        <option value="assets/car3.png">Blue Color</option>
+        <!-- <option value="url(assets/car${4}.png)">Hard</option> -->
+      </select>
+      <div class="my-2 text-start col-8 px-1 align-items-center d-flex flex-row justify-content-between">
+      <span>Mute Sound </span> <i class="fas fa-volume-mute text-start " title="Mute Sound" style="font-size: 24px;" id="mut"></i>
+      </div> 
+       <button class="str" id="start1">Start Game</button>
         
       </div>
 </div>
 <div class="container-fluid" id="dnone">
   <div class="position-fixed top-0 col-lg-2 col-4" id="score">
     <h3>Score: <span id="score1">100</span> </h3>
-    <h3>Coins: <span id="coins"></span> </h3>
+    <h3>Coins: <span id="coins">00</span> </h3>
+    <!-- <button id="mut">Mute Sound</button> -->
   </div>
     <div class="row justify-content-center align-items-center">
         <div class="" id="road">
           <div class="car" id="car">
-            <img src="assets/Car.png" class="img-fluid" alt="">
+            <img src="assets/Car.png"  id="imgcrt" class="img-fluid" alt="">
           </div>
         </div>
         <div class="arrow col-3 d-flex flex-column justify-content-center align-items-center flex-row">
